@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form login</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* fundo da pagina */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(0deg, black, rgb(42, 0, 83), rgb(42, 0, 83));
+
+    }
+
+    /* layout dos botoes de acesso */
+    form {
+        background-color: rgb(26, 26, 26);
+        max-width: 500px;
+        width: 70%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    /* formatação do titulo */
+    form h3 {
+        text-align: center;
+        color: #ffffffe0;
+        font-family: 'Times New Roman', Times, serif, ;
+        border-left: 2px solid violet;
+    }
+
+    /* formatação do login e senha */
+    form input[type=text],
+    form input[type=password] {
+        width: 100%;
+        height: 45px;
+        border: 1px solid #cecece;
+        padding-left: 10px;
+        margin: 10px 0;
+        background: #181818;
+        font-family: 'Times New Roman', Times, serif, ;
+        color: white;
+    }
+
+    /* formatação do botão enviar */
+    form input[type=submit] {
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        background-color: violet;
+        color: #ffffffe0;
+        border: 0;
+        border-radius: 20px;
+        transition: 1s;
+    }
+
+    form input[type=submit]:hover {
+        background-color: rgb(42, 0, 83);
+    }
+
+    form input[type=text]:focus {
+        outline: 0;
+    }
+
+    form input[type=password]:focus {
+        outline: 0;
+    }
+
+    /* style da box */
+    .box {
+        position: relative;
+        width: 40%;
+        height: 250px;
+        background: black;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .box::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 380px;
+        background: linear-gradient(0deg, transparent, violet, violet);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+
+    .box::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 380px;
+        background: linear-gradient(0deg, transparent, violet, violet);
+        transform-origin: bottom left;
+        animation: animate 6s linear infinite;
+        animation-delay: -3s;
+
+
+    }
+
+    @keyframes animate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+</body>
+
+<body>
+    <!-- botoes da pagina -->
+    <form>
+        <h3>acessar pagina</h3>
+        <input type="text" placeholder="login" id="login">
+        <input type="password" placeholder="senha" id="senha">
+        <input id="enviar" type="submit" name="enviar" value="enviar" onclick="logar(); return false" />
+    </form>
+    <!--animação no campos login e senha -->
+    <script>
+        //login//
+        var login = document.getElementById("login")
+        login.addEventListener("focus", () => {
+            login.style.borderColor = "violet";
+            login.style.fontSize = "150% ";
+        });
+        var login = document.getElementById("login")
+        login.addEventListener("blur", () => {
+            login.style.borderColor = "transparent";
+            login.style.fontSize = "100% ";
+
+        });
+
+        //senha//
+        var senha = document.getElementById("senha")
+        senha.addEventListener("focus", () => {
+            senha.style.borderColor = "violet";
+            senha.style.fontSize = "150% ";
+
+        });
+        var senha = document.getElementById("senha")
+        senha.addEventListener("blur", () => {
+            senha.style.borderColor = "transparent";
+            senha.style.fontSize = "100% ";
+
+        });
+
+    </script>
+    <!-- validação de acesso para arquivo -->
+    <script>
+        function logar() {
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+
+
+            if (login == "admin" && senha == "admin") {
+                window.alert("password and login correct, proceed");
+                location.href = ("home.html");
+            }
+            else (
+                window.alert("senha e usuarios incorretos")
+            );
+        }
+    </script>
+</body>
+
+</html>

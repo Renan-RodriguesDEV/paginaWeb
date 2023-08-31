@@ -1,0 +1,180 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: georgia;
+}
+.titulo{
+	position: fixed;
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+	animation-name:animacao;
+	animation-delay: 2s;
+	animation-duration: 10s;
+	animation-iteration-count: infinite ;
+	animation-timing-function: linear;
+	animation-direction: alternate-reverse;
+}
+/*animaçâo para o titulo*/
+	@keyframes animacao{
+		from{
+			background-color:  violet;opacity: 100%;
+		}
+		to{
+			background-color:  rgb(42, 0, 83);opacity: 50%;
+		}
+		
+	}
+header {
+
+	background-color: rgb(42, 0, 83);
+	color: gray;
+	padding: 15px;
+	text-align: center;
+	border-bottom: 5px solid rgb(58, 0, 29);
+}
+/* conf para os container do card */
+.container {
+	background-color: gray;
+	min-height: 60vh;
+	padding: 60px;
+}
+/* conf para os produtos do container do card */
+
+.produtos-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.card {
+	width: 31%;
+	display: inline-block;
+	margin: 1% 1%;
+	padding: 15px;
+}
+/* configuraçao da imagem */
+#img-1,#img-2,#img-3,#img-4,#img-5,#img-6{
+	height: 200px;
+	padding: 50px;
+	margin-bottom: 5px;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	
+	}
+/* animação para imagens */
+	#img-1:hover{
+		opacity: 0.5;
+	}
+	#img-2:hover{
+		opacity: 0.5;
+	}
+	#img-3:hover{
+		opacity: 0.5;
+	}
+	#img-4:hover{
+		opacity: 0.5;
+	}
+	#img-5:hover{
+		opacity: 0.5;
+	}
+	#img-6:hover{
+		opacity: 0.5;
+	}
+	/* imagem do jogo dentro do card */
+#img-1 {
+	background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-raganok-clean-keyart-01-en-10mar22?$native$);
+}
+
+#img-2 {
+	background-image: url(https://www.lendagames.com/wp-content/uploads/2020/04/ASSET-TLOU-2-GAME-IMG.jpg);
+}
+
+#img-3 {
+	background-image: url(https://img.olhardigital.com.br/wp-content/uploads/2021/08/gta-san-andreas-capa.png);
+}
+
+#img-4 {
+	background-image: url(https://images7.alphacoders.com/439/439636.jpg);
+}
+
+#img-5 {
+	background-image: url(https://oyster.ignimgs.com/mediawiki/apis.ign.com/horizon-zero-dawn/c/cf/HZD_999.jpg?width=1280);
+}
+
+#img-6 {
+	background-image: url(https://www.torredevigilancia.com/wp-content/uploads/2021/02/Hitman-3-1.jpg);
+}
+/* rodapé */
+footer {
+	background-color: rgb(42, 0, 83);
+	color: gray;
+	border-top: 3px solid rgb(58, 0, 29);
+	text-align: center;
+	padding: 30px;
+}
+
+h3 {
+
+	margin-bottom: 10px;
+	color: white;
+	border-left: 5px solid rebeccapurple;
+	font-size: 24px;
+	padding-left: 7px;
+}
+/* conf para os botao do card */
+.card p {
+	margin-bottom: 10px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.bnt {
+	background-color: blueviolet;
+	display: block;
+	text-align: center;
+	width: 100%;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	padding: 15px;
+	border-radius: 5px;
+	transition: 0, 5s;
+}
+
+.bnt:hover {
+	background-color: violet;
+}
+
+.dados{
+	border: 2px solid rgb(58, 0, 29);
+	background-color: violet ;
+	padding: 15px;
+	text-align: center;
+	border-bottom: 5px solid rgb(58, 0, 29);
+}
+#gmail,#senha,#date:hover{
+	background-color: rgb(58, 0, 29); 
+}
+#gmail,#senha,#date{
+	animation: infinite, linear;
+}
+#gmail{
+	text-align: center;
+	background-color: gray;
+	font-family: sans-serif;
+}
+#senha{
+	font-family: sans-serif;	
+	text-align: center;
+	background-color: gray;
+}
+#date{
+	font-family: sans-serif;
+	background-color: gray;
+	text-align: center;
+	color: azure;
+}
